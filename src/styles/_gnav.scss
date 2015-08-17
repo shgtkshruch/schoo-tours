@@ -1,0 +1,17 @@
+.gnav {
+  float: right;
+  padding-top: 15px;
+  &__item {
+    float: left;
+    margin-left: 50px;
+    > a {
+      display: block;
+      > img {
+        vertical-align: top;
+      }
+      &:hover {
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}

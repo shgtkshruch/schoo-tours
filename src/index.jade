@@ -9,12 +9,24 @@ html(lang="ja")
     meta(content='keywords', name='keywords')
     meta(content='width=device-width, initial-scale=1' name='viewport')
     meta(content='telephone=no', name='format-detection')
-    
+
     link(rel='stylesheet', href='styles/style.css', media='all')
   body
-    h1 Hello Github Pages
-
-    
+    header.header
+      .container.cf
+        h1.logo
+          img(src="images/logo.png" alt="schoo tours")
+        nav.gnav.cf
+          ul
+            each val, i in ['feature', 'movie', 'city', 'nature', 'map', 'voice']
+              li.gnav__item
+                a(href="##{val}")
+                  img(src="images/nav--#{val}.png" alt="#{val}")
+      img.header__copy(src="images/copy.png" alt="Discover The World")
+      .slide
+        ul
+          li
+            img(src="images/slide-1.jpg" alt="")
 
     // build:js scripts/main.js
     script(src='scripts/script.js')

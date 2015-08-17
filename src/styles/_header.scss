@@ -1,0 +1,13 @@
+.header {
+  box-sizing: border-box;
+  position: relative;
+  height: 680px;
+  padding-top: 20px;
+  &__copy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
