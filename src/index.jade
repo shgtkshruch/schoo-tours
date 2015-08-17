@@ -28,6 +28,19 @@ html(lang="ja")
           li
             img(src="images/slide-1.jpg" alt="")
 
+    section.section
+      .container
+        h2.section__heading
+          span
+            img(src="images/section__heading--feature.png" alt="feature")
+        .section__body.cf
+          each val, i in ['memory', 'dinner', 'hotel']
+            .item
+              .item__icon
+                span.item__name= val
+              p.item__body Ipsum voluptas maxime nobis autem nisi! Natus doloribus tempora voluptates neque quidem.
+
+
     // build:js scripts/main.js
     script(src='scripts/script.js')
     // endbuild
