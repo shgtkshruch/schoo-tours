@@ -1,0 +1,40 @@
+.voice {
+  width: 660px;
+  margin: 0 auto 35px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__person{
+    display: table-cell;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  &__img {
+    border-radius: 50%;
+  }
+  &__name {
+    margin-top: 10px;
+    color: #555;
+    font-weight: 300;
+  }
+  &__body {
+    box-sizing: border-box;
+    position: relative;
+    display: table-cell;
+    width: 500px;
+    padding: 20px;
+    color: #fff;
+    background-color: #7cf;
+    line-height: 1.4;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      border: 25px solid transparent;
+      border-right: 25px solid #7cf;
+    }
+  }
+}

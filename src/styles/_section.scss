@@ -4,6 +4,9 @@
   &.secondary {
     background-color: #f8f8f8;
   }
+  &#map {
+    padding-bottom: 0;
+  }
   &__heading {
     position: relative;
     margin-bottom: 45px;

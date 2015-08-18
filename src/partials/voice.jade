@@ -1,0 +1,13 @@
+section.section.secondary
+  .container
+    h2.section__heading
+      span
+        img(src="images/section__heading--voice.png" alt="voice")
+    .section__body
+      p.section__p Elit neque repudiandae beatae aperiam quibusdam omnis quod. Architecto rem fugit fugiat iure adipisci! Facere natus laboriosam dignissimos nostrum inventore corrupti deleniti assumenda accusamus.
+      each name, i in ['Karen Bond', 'Beatrice Oliver', 'Stephen Miller']
+        .voice
+          .voice__person
+            img.voice__img(src="images/person-#{i+1}.jpg" alt="#{name}")
+            .voice__name= name
+          p.voice__body Ipsum aperiam asperiores error unde in dicta in nulla nemo excepturi! Reiciendis voluptate aut nemo exercitationem enim, hic rem adipisicing illo ratione tenetur consectetur, Lorem fugit perferendis enim voluptatum iste illum.
