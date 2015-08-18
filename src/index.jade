@@ -49,7 +49,27 @@ html(lang="ja")
           .section__p Amet quis ipsa perferendis vel eum modi porro similique quia. Suscipit minima voluptas quasi quibusdam rerum at nihil numquam fugit labore ullam mollitia deserunt officia hic exercitationem doloribus dolorem nostrum.
         iframe(src="https://www.youtube.com/embed/BUoYWcbDCXI" width="960" height="540" frameborder="0")
 
+    section.visual-section.city
+      .box
+        h2.box__heading
+          img(src="images/box__heading--city.png" alt="city")
+        p.box__body Lorem placeat itaque illum aperiam odio, vel? A eaque voluptatibus at voluptatibus laborum sint deleniti! Perferendis maxime eveniet fugit sit ullam! Esse fugiat sint.
 
+    section.section.secondary
+      .container
+        h2.section__heading
+          span
+            img(src="images/section__heading--locations.png" alt="locations")
+        .section__body.cf
+          each val, i in ['San Francisco', 'Roma', 'Paris', 'Santorini', 'Sydney', 'Stockholm']
+            .card
+              a.card__img(href="")
+                img(src="images/city-thumbnail-#{i+1}.jpg" alt="#{val}")
+              .card__body
+                p= val
+                p Ipsum cumque minus mollitia ipsum aliquam numquam magnam.
+                p 7 days
+                p $1,500
 
     // build:js scripts/main.js
     script(src='scripts/script.js')
