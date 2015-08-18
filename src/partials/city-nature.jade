@@ -1,0 +1,25 @@
+- kinds = ['city', 'nature']
+- locations = [['San Francisco', 'Roma', 'Paris', 'Santorini', 'Sydney', 'Stockholm'], ['Antelope Canyon', 'Tuscany', 'Salar de Uyuni', 'Niagara Falls', 'Bled Castle', 'Lake Takapo']]
+
+each kind, i in kinds
+  section.visual-section(class="#{kind}")
+    .box
+      h2.box__heading
+        img(src="images/box__heading--#{kind}.png" alt="#{kind}")
+      p.box__body Lorem placeat itaque illum aperiam odio, vel? A eaque voluptatibus at voluptatibus laborum sint deleniti! Perferendis maxime eveniet fugit sit ullam! Esse fugiat sint.
+
+  section.section.secondary
+    .container
+      h2.section__heading
+        span
+          img(src="images/section__heading--locations.png" alt="locations")
+      .section__body.cf
+        each location, j in locations[i]
+          .card
+            a.card__img(href="")
+              img(src="images/#{kind}-thumbnail-#{j+1}.jpg" alt="#{location}")
+            .card__body
+              p= location
+              p Ipsum cumque minus mollitia ipsum aliquam numquam magnam.
+              p 7 days
+              p $1,500

@@ -1,0 +1,15 @@
+header.header
+  .container.cf
+    h1.logo
+      img(src="images/logo.png" alt="schoo tours")
+    nav.gnav.cf
+      ul
+        each val, i in ['feature', 'movie', 'city', 'nature', 'map', 'voice']
+          li.gnav__item
+            a(href="##{val}")
+              img(src="images/nav--#{val}.png" alt="#{val}")
+  img.header__copy(src="images/copy.png" alt="Discover The World")
+  .slide
+    ul
+      li
+        img(src="images/slide-1.jpg" alt="")
