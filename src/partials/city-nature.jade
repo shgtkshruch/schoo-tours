@@ -2,7 +2,7 @@
 - locations = [['San Francisco', 'Roma', 'Paris', 'Santorini', 'Sydney', 'Stockholm'], ['Antelope Canyon', 'Tuscany', 'Salar de Uyuni', 'Niagara Falls', 'Bled Castle', 'Lake Takapo']]
 
 each kind, i in kinds
-  section.visual-section(class="#{kind}")
+  section.visual-section(class="#{kind}" id="#{kind}")
     .box
       h2.box__heading
         img(src="images/box__heading--#{kind}.png" alt="#{kind}")
