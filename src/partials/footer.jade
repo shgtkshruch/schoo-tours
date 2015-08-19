@@ -1,0 +1,8 @@
+footer.footer
+  nav.nav.cf
+    ul
+      each val, i in ['feature', 'movie', 'city', 'nature', 'map', 'voice']
+        li.nav__item
+          a(href="##{val}")
+            img(src="images/nav--#{val}.png" alt="#{val}")
+  small.footer__copy 2014 Schoo Tours. All Rights Reserved.
