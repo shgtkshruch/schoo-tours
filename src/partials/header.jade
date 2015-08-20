@@ -9,7 +9,8 @@ header.header
             a(href="##{val}")
               img(src="images/nav--#{val}.png" alt="#{val}")
   img.header__copy(src="images/copy.png" alt="Discover The World")
-  .slide
+  .slide#js-slide
     ul
-      li
-        img(src="images/slide-1.jpg" alt="")
+      - for (var i = 0; i < 4; i++)
+        li
+          img(src="images/slide-#{i+1}.jpg" alt="")

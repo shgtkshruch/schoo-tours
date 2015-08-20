@@ -25,6 +25,11 @@ html(lang="ja")
 
     script(src="https://maps.googleapis.com/maps/api/js")
 
+    // build:js scripts/vendor.js
+    script(src='../bower_components/jquery/dist/jquery.min.js')
+    // endbuild
+
     // build:js scripts/main.js
+    script(src='scripts/slide.js')
     script(src='scripts/map.js')
     // endbuild

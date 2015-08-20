@@ -1,0 +1,20 @@
+{
+  "name": "schoo-tours",
+  "version": "0.0.0",
+  "homepage": "https://github.com/shgtkshruch/schoo-tours",
+  "authors": [
+    "shgtkshruch <shgtk.shruch@gmail.com>"
+  ],
+  "description": "schoo tours landing page",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4"
+  }
+}
