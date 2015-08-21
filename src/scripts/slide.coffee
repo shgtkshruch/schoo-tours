@@ -1,27 +1,48 @@
 $imgs = $ '#js-slide'
   .find 'img'
+$prev = $ '#js-slide-prev'
+$next = $ '#js-slide-next'
 
-index = 0
 duration = 1000
 interval = 7000
-slide_num = $imgs.length
+slideNum = $imgs.length
+index = slideNum
+nowImg = $imgs.first()
+slideTimer = ''
+nowFade = false
 
 # 初期化処理
 # 一番目の要素は表示する
 $imgs.first().show()
 
-startSlide = ->
-  window.setInterval ->
-    $now_img = $ $imgs[index%slide_num]
-    $next_img = $ $imgs[(index+1)%slide_num]
-
-    $now_img.fadeOut
-      duration: duration
-    $next_img.fadeIn
-      duration: duration
-
-    index++
-
+startSlideTimer = ->
+  slideTimer = window.setInterval ->
+    slide ++index
   , interval
 
-window.addEventListener 'load', startSlide, false
+slide = ->
+  nowFade = true
+  nextImg = $imgs[index % slideNum]
+
+  $ nowImg
+    .fadeOut duration
+  $ nextImg
+    .fadeIn duration, ->
+      nowImg = @
+      nowFade = false
+
+$prev.click (e) ->
+  if nowFade then return
+  clearInterval slideTimer
+  --index
+  slide()
+  startSlideTimer()
+
+$next.click (e) ->
+  if nowFade then return
+  clearInterval slideTimer
+  ++index
+  slide()
+  startSlideTimer()
+
+window.addEventListener 'DOMContentLoaded', startSlideTimer, false
