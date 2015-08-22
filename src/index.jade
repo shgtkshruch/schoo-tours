@@ -11,6 +11,11 @@ html(lang="ja")
     meta(content='telephone=no', name='format-detection')
 
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', media='all')
+
+    // build:css styles/vendor.css
+    link(rel='stylesheet', href='../bower_components/animate.css/animate.min.css', media='all')
+    // endbuild
+
     link(rel='stylesheet', href='styles/style.css', media='all')
   body
 
@@ -28,9 +33,11 @@ html(lang="ja")
 
     // build:js scripts/vendor.js
     script(src='../bower_components/jquery/dist/jquery.min.js')
+    script(src='../bower_components/lazy-line-painter/jquery.lazylinepainter-1.5.1.min.js')
     // endbuild
 
     // build:js scripts/main.js
     script(src='scripts/slide.js')
+    script(src='scripts/svg-animation.js')
     script(src='scripts/map.js')
     // endbuild

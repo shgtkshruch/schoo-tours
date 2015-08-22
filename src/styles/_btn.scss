@@ -1,0 +1,16 @@
+.btn {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-left: -108px;
+  padding: 17px 50px;
+  border: 2px solid #fff;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}

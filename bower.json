@@ -16,6 +16,8 @@
   ],
   "dependencies": {
     "jquery": "2.1.4",
-    "font-awsome": "~4.4.0"
+    "font-awsome": "~4.4.0",
+    "animate.css": "~3.4.0",
+    "lazy-line-painter": "~1.5.1"
   }
 }
