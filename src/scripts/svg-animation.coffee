@@ -81,6 +81,8 @@ $btn.click (e) ->
       ,
         duration: 500
         complete: ->
+          $e.hide()
+
           paint $memory, memoryPath, ->
             paint $dinner, dinnerPath, ->
               paint $hotel, hotelPath
