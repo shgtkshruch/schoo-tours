@@ -16,7 +16,7 @@ each kind, i in kinds
       .section__body.cf
         each location, j in locations[i]
           .card
-            a.card__img(href="")
+            a.card__img(href="images/#{kind}-#{j+1}.jpg")
               img(src="images/#{kind}-thumbnail-#{j+1}.jpg" alt="#{location}")
             .card__body
               p= location
