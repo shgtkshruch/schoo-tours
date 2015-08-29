@@ -1,4 +1,29 @@
 map = ''
+locations = [
+  [19, -155]
+  [37, -119]
+  [36, -111]
+  [43, -74 ]
+  [-20, -67]
+  [-7, -39]
+  [51, 0]
+  [22, 5]
+  [46, 7]
+  [51, 13]
+  [-13, 14]
+  [41, 28]
+  [26, 30]
+  [-3, 37]
+  [25, 55]
+  [1, 73]
+  [21, 94]
+  [28, 120]
+  [35, 139]
+  [-33, 151]
+]
+mapAnimationEnd = false
+iterator = 0
+
 
 init = ->
   mapCanvas = document.getElementById 'google-map'
@@ -67,40 +92,35 @@ init = ->
       }
     ]
 
-  locations = [
-    [19, -155]
-    [37, -119]
-    [36, -111]
-    [43, -74 ]
-    [-20, -67]
-    [-7, -39]
-    [51, 0]
-    [22, 5]
-    [46, 7]
-    [51, 13]
-    [-13, 14]
-    [41, 28]
-    [26, 30]
-    [-3, 37]
-    [25, 55]
-    [1, 73]
-    [21, 94]
-    [28, 120]
-    [35, 139]
-    [-33, 151]
-  ]
-
   map = new google.maps.Map mapCanvas, mapOptions
   map.setOptions styles: styles
 
-  addMarker location for location in locations
+google.maps.event.addDomListener window, "load", init
 
-addMarker = (location) ->
+$ '#map'
+  .waypoint (direction) ->
+    if mapAnimationEnd then return
+    mapAnimationEnd = true
+    drop()
+  ,
+    offset: '25%'
+
+drop = ->
+  i = 0
+  while i < locations.length
+    window.setTimeout (->
+      addMarker()
+    ), i * 100
+    i++
+
+addMarker = ->
+  location = locations[iterator]
   myLating = new google.maps.LatLng location[0], location[1]
   marker = new google.maps.Marker
     position: myLating
     map: map
     draggable: false
     icon: "images/map-marker.png"
+    animation: google.maps.Animation.DROP
+  iterator++
 
-google.maps.event.addDomListener window, "load", init
