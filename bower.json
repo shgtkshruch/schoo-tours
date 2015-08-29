@@ -19,6 +19,7 @@
     "font-awsome": "~4.4.0",
     "animate.css": "~3.4.0",
     "lazy-line-painter": "~1.5.1",
-    "waypoints": "~4.0.0"
+    "waypoints": "~4.0.0",
+    "jquery-smooth-scroll": "~1.5.5"
   }
 }
