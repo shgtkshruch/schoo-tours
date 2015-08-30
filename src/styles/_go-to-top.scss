@@ -1,0 +1,31 @@
+.go-to-top {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 15px solid transparent;
+  }
+  &:before {
+    border-bottom: 15px solid #fff;
+    transform: translate(-50%, -73%);
+  }
+  &:after {
+    border-bottom: 15px solid #000;
+    transform: translate(-50%, -65%);
+  }
+}
